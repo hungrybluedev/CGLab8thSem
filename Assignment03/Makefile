@@ -5,8 +5,8 @@ NAME=sine
 all: clean $(NAME)
 
 $(NAME): $(NAME).c
-mkdir -p bin
-	$(CC) $(CFLAGS) $(^) -o bin/$(@) -lGL -lGLU -lglut
+	mkdir -p bin
+	$(CC) $(CFLAGS) $(^) -o bin/$(@) -lm
 
 run: $(NAME)
 	./bin/$(NAME)
